@@ -56,11 +56,16 @@
 
       <details class="form-toggle">
         <summary>Or fill out a quick form</summary>
-        <form id="contact-form">
-          <input name="name" placeholder="Your name" required autocomplete="name">
-          <input name="email" type="email" placeholder="Your email" required autocomplete="email">
-          <input name="phone" type="tel" placeholder="Phone (optional)" autocomplete="tel">
+        <p class="autofill-tip">Tap a field, then tap <strong>AutoFill</strong> above your keyboard to fill from your My Card in Contacts.</p>
+        <form id="contact-form" autocomplete="on">
+          <div class="row">
+            <input name="given-name" placeholder="First name" required autocomplete="given-name">
+            <input name="family-name" placeholder="Last name" required autocomplete="family-name">
+          </div>
+          <input name="email" type="email" placeholder="Your email" required autocomplete="email" inputmode="email">
+          <input name="phone" type="tel" placeholder="Phone (optional)" autocomplete="tel" inputmode="tel">
           <input name="company" placeholder="Company (optional)" autocomplete="organization">
+          <input name="title" placeholder="Title (optional)" autocomplete="organization-title">
           <textarea name="note" placeholder="Note (optional)"></textarea>
           <button type="submit" class="btn primary">Send</button>
         </form>
@@ -80,13 +85,14 @@
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     var f = new FormData(form);
-    var name = (f.get('name') || '').trim();
+    var name = ((f.get('given-name') || '') + ' ' + (f.get('family-name') || '')).trim();
     var subject = 'New contact: ' + name;
     var lines = [
       'Name: ' + name,
       'Email: ' + (f.get('email') || ''),
       'Phone: ' + (f.get('phone') || ''),
       'Company: ' + (f.get('company') || ''),
+      'Title: ' + (f.get('title') || ''),
       '',
       f.get('note') || ''
     ];
