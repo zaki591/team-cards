@@ -22,6 +22,7 @@
     <a class="btn primary" href="contact.vcf" download="zaki.vcf">
       Save My Contact
     </a>
+    <button class="btn secondary" id="share-btn" hidden type="button">Share My Card</button>
 
     <div class="quick-actions">
       <a class="action" href="mailto:zaki@success.ai" aria-label="Email">
@@ -79,6 +80,19 @@
 </main>
 
 <script>
+(function() {
+  var shareBtn = document.getElementById('share-btn');
+  if (shareBtn && navigator.share) {
+    shareBtn.hidden = false;
+    shareBtn.addEventListener('click', function() {
+      navigator.share({
+        title: 'Zaki Abujudeh — COO & Co-Founder at Success.ai',
+        text: 'Save my contact card',
+        url: window.location.href
+      }).catch(function() {});
+    });
+  }
+})();
 (function() {
   var form = document.getElementById('contact-form');
   if (!form) return;

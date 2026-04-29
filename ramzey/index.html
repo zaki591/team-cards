@@ -80,6 +80,19 @@
 
 <script>
 (function() {
+  var shareBtn = document.getElementById('share-btn');
+  if (shareBtn && navigator.share) {
+    shareBtn.hidden = false;
+    shareBtn.addEventListener('click', function() {
+      navigator.share({
+        title: 'Ramzey Nassar — Founder & CEO at DOE Media',
+        text: 'Save my contact card',
+        url: window.location.href
+      }).catch(function() {});
+    });
+  }
+})();
+(function() {
   var form = document.getElementById('contact-form');
   if (!form) return;
   form.addEventListener('submit', function(e) {
