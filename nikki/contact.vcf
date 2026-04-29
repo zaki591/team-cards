@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Lopez;Nikki;;;
+FN:Nikki Lopez
+ORG:DOE Media
+TITLE:Sales Manager
+EMAIL;TYPE=INTERNET,WORK:nicole@doe.media
+TEL;TYPE=CELL,VOICE:+19549526216
+URL:https://doe.media
+END:VCARD

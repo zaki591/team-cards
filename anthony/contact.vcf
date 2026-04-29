@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Al Nasser;Anthony;;;
+FN:Anthony Al Nasser
+ORG:Sol Financial
+TITLE:Founder & CEO
+EMAIL;TYPE=INTERNET,WORK:anthony@sol.financial
+TEL;TYPE=CELL,VOICE:+14088334093
+URL:https://sol.financial
+END:VCARD

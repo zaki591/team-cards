@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Reynolds;Maya;;;
+FN:Maya Reynolds
+ORG:DOE Media
+TITLE:Marketing Manager
+EMAIL;TYPE=INTERNET,WORK:maya@doemedia.com
+TEL;TYPE=CELL,VOICE:+17085773572
+URL:https://doemedia.com
+END:VCARD

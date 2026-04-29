@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Nassar;Ramzey;;;
+FN:Ramzey Nassar
+ORG:DOE Media
+TITLE:Founder & CEO
+EMAIL;TYPE=INTERNET,WORK:ramzey@doemedia.com
+TEL;TYPE=CELL,VOICE:+13053361535
+URL:https://doemedia.com
+END:VCARD
